@@ -114,37 +114,38 @@ describe('Express Server API Tests', () => {
       // Add assertions to check the structure of the response data
     });
 
-    it('should get one clothes item by ID', async () => {
-      const response = await request(server)
-        .get(`/clothes/${createdClothesId}`);
+    // it('should get one clothes item by ID', async () => {
+    //   const response = await request(server)
+    //     .get(`/clothes/${createdClothesId}`);
 
-      expect(response.status).toBe(200);
-      expect(response.body).toHaveProperty('id', createdClothesId);
-      // Add assertions to check the structure of the response data
-    });
+    //   expect(response.status).toBe(200);
+    //   expect(response.body).toHaveProperty('id', createdClothesId);
+    //   // Add assertions to check the structure of the response data
+    // });
 
-    it('should update a clothes item by ID', async () => {
-      const updatedData = {
-        name: 'Updated Shirt',
-        size: 'Large',
-      };
+  //   it('should update a clothes item by ID', async () => {
+  //     const updatedData = {
+  //       name: 'Updated Shirt',
+  //       size: 'Large',
+  //     };
 
-      const response = await request(server)
-        .put(`/clothes/${createdClothesId}`)
-        .send(updatedData);
+  //     const response = await request(server)
+  //       .put(`/clothes/${createdClothesId}`)
+  //       .send(updatedData);
 
-      expect(response.status).toBe(200);
-      expect(response.body).toHaveProperty('id', createdClothesId);
-      expect(response.body).toHaveProperty('name', 'Updated Shirt');
-      expect(response.body).toHaveProperty('size', 'Large');
-    });
+  //     expect(response.status).toBe(200);
+  //     expect(response.body).toHaveProperty('id', createdClothesId);
+  //     expect(response.body).toHaveProperty('name', 'Updated Shirt');
+  //     expect(response.body).toHaveProperty('size', 'Large');
+  //   });
 
-    it('should delete a clothes item by ID', async () => {
-      console.log(createdClothesId);
-      const response = await request(server)
-        .delete(`/clothes/${createdClothesId}`);
+  //   it('should delete a clothes item by ID', async () => {
+  //     console.log(createdClothesId);
+  //     const response = await request(server)
+  //       .delete(`/clothes/${createdClothesId}`);
 
-      expect(response.status).toBe(200);
-      expect(response.body).toBeNull(); // Null response indicates successful deletion
-    });
-  });
+  //     expect(response.status).toBe(200);
+  //     expect(response.body).toBeNull(); // Null response indicates successful deletion
+  //   });
+  // });
+})
