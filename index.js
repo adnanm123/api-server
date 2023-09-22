@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001; // Define the port for the server to list
 
 const server = createServer(); // Create the server using the createServer function
 
-server.start(PORT, () => {
+server.start(PORT, () => { //start method, which starts the port. 
+  // It takes two arguments: PORT and a callback that will be executed once the server is started.
   console.log(`Server is running on port ${PORT}`);
 });
