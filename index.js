@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const { createServer } = require('./lib/server'); // Import the createServer function from your server.js file
+const { createServer } = require("./lib/server"); // Import the createServer function from your server.js file
 
 const PORT = process.env.PORT || 3001; // Define the port for the server to listen on
 
